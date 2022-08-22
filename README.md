@@ -234,7 +234,7 @@ head(weekday_steps_sleep)
 
 I plotted two graphs 'Daily steps through weekday' and 'Minutes asleep per weekday' with ggplot2. 
 
-See graph 'Daily steps through weekday' and 'Minutes asleep per weekday'. 
+See graph [Daily steps through weekday and Minutes asleep per weekday](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/E14D3532-CC62-457B-B316-75032316153C.png). 
 
 As per the plots, I can confirm that the users walk a minimum of 7500 steps a day except on Sunday and they don't sleep the recommended 8 hours of sleep per day. 
 
