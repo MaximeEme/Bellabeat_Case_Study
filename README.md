@@ -290,7 +290,7 @@ head(daily_use_percent)
 
 I plotted the results.
 
-See graph "Usage of device per day". 
+See graph [Usage of device per day](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/AA2BFA47-0212-4E50-A278-C0F8E05E1029.png)
 
 From the results, I can say that 50% of the sample use frequently their device. 12% use their device from 12 to 21 days and 38% rarely use their device. 
 
