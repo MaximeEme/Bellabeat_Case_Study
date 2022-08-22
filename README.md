@@ -252,7 +252,7 @@ head(hourly_steps)
 
 Then, I plotted the results. 
 
-See graph 'Steps per 24h'. 
+See graph [Steps per 24h](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/B5C7887B-98CA-4D3F-9E9D-40B6B8A0BEC9.png)
 
 I can confirm that the users were the most active during the period from 8am to 7pm. Lunch time having the most steps walked with evening. 
 
