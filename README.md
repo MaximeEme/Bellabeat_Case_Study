@@ -333,7 +333,7 @@ minutes_worn_lowuse <-  minutes_worn %>% filter(usage == "low use") %>% group_by
 
 Once, I had created the dataframes according to my new categories, I decided to present them in a treemap plot. 
 
-See graphs "Time worn per day", "High use - Users", "Low use - Users" and "Moderate use - Users". 
+See graphs "Time worn per day", [High use - Users](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/B7C7F0F4-9989-48B3-92D2-4AB953271FC2.png) "Low use - Users" and "Moderate use - Users". 
 
 According to the plots, I can verify that 36% of the users in total wear the device all day, 60% more than half a day and 4% less than a day. 
 
