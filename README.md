@@ -260,7 +260,7 @@ I can confirm that the users were the most active during the period from 8am to 
 
 I wanted to find out if there were some correlations between the dataset. 
 
-See graph 'Daily steps vs calories burned'. [link](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/17270CC6-0A55-449E-A15C-B363BE37CAE6.png)
+See graph [Daily steps vs calories burned](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/17270CC6-0A55-449E-A15C-B363BE37CAE6.png)
 
 There is a positive correlation between the amount of steps walked and the calories burned. 
 
