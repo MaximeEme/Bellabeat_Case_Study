@@ -62,7 +62,7 @@ library(lubridate)
 library(dplyr)
 ```
 
-I choose these packages to help me with my analysis. 
+I chose these packages to help me with my analysis. 
 
 2. **Importing datasets**
 
