@@ -8,7 +8,7 @@ This project is the capstone project of the Google Data Analytics Professional C
 
 1.  **Bellabeat**
 
-Bellabeat is a high-tech company that manufactures health-focused smart product since 2013 and has known a rapid growth and quickly positioned itself as a tech-driven wellness company for women.
+Bellabeat is a high-tech company that manufactures health-focused smart products since 2013 and has experienced rapid growth and quickly positioned itself as a tech-driven wellness company for women.
 
 2. **Business task**
 
@@ -28,7 +28,7 @@ The data has been shared publicly on Kaggle : Fitbit fitness tracker data and st
 
 2.  **Limitations of Data**
 
-The data collected is from 2016, hence it may not be relevant anymore to draw satisfactory conclusions on health, calories consumption, sleeping habits or activity. The sample size is only 30 female and is not representative of the female population. The data has been collected through a survey , hence I won't be able to determine the integrity or accuracy of the data.
+The data collected is from 2016, hence it may not be relevant anymore to draw satisfactory conclusions on health, calories consumption, sleeping habits or activity. The sample size is only 30 females and is not representative of the female population. The data has been collected through a survey , hence I won't be able to determine the integrity or accuracy of the data.
 
 3.  **Is the data ROCC ?**
 
@@ -81,7 +81,7 @@ sleepDay_merged <- read_csv("Fitbit data/sleepDay_merged.csv")
 
 3. **Preview the datasets**
 
-I previewed the datasets and checked the summary of every columns. 
+I previewed the datasets and checked the summary of every column. 
 
 ```{r}
 head(dailyActivity_merged)
@@ -165,7 +165,7 @@ head(sleepDay_merged)
 hourlySteps_merged <- hourlySteps_merged %>% rename(date_time = activityhour)%>% mutate(date_time = mdy_hms(date_time))
 ```
 
-I checked that the date time columns was in the correct format. 
+I checked that the date time columns were in the correct format. 
 
 ```{r}
 head(hourlySteps_merged)
@@ -179,13 +179,13 @@ I merged dailyActivity_merged and sleepDay_merged.
 dailyActivity_sleep <- merge(dailyActivity_merged, sleepDay_merged, by=c("id", "date"))
 ```
 
-## Step 4 : Analyse 
+## Step 4 : Analyse
 
-I analyzed trends of the Fitbit users and solve my business task. 
+I analyzed trends of the Fitbit users and solved my business task.
 
 1. **Determine the type of users per activity level**
 
-I didn't have demographic variables from the sample and I wanted to determine the type of users from the dataset by their activity level. 
+I didn't have demographic variables from the sample and I wanted to determine the type of users from the dataset by their activity level.
 
 I followed the classification of this site [link](https://observatoireprevention.org/2018/09/17/marcher-10-000-pas-par-jour/). I categorized the users as follow : 
 
@@ -249,11 +249,11 @@ hourly_steps <- hourlySteps_merged %>% separate(date_time, into = c("date", "tim
 head(hourly_steps)
 ```
 
-Then, I plotted the results. 
+Then, I plotted the results.
 
 See graph [Steps per 24h](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/B5C7887B-98CA-4D3F-9E9D-40B6B8A0BEC9.png)
 
-I can confirm that the users were the most active during the period from 8am to 7pm. Lunch time having the most steps walked with the evening. 
+I can confirm that the users were the most active during the period from 8am to 7pm. Lunch time having the most steps walked in the evening.
 
 6. **Correlation**
 
@@ -291,7 +291,7 @@ I plotted the results.
 
 See graph [Usage of device per day](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/AA2BFA47-0212-4E50-A278-C0F8E05E1029.png)
 
-From the results, I can say that 50% of the sample use frequently their device. 12% use their device from 12 to 21 days and 38% rarely use their device. 
+From the results, I can say that 50% of the sample use their device frequently. 12% use their device from 12 to 21 days and 38% rarely use their device.
 
 8. **Usage of smart device in minutes**
 
@@ -330,23 +330,22 @@ minutes_worn_moderateuse <-  minutes_worn %>% filter(usage == "moderate use") %>
 minutes_worn_lowuse <-  minutes_worn %>% filter(usage == "low use") %>% group_by(worn) %>% summarise(total = n()) %>% mutate(totals = sum(total)) %>% group_by(worn) %>% summarise(total_percent = total/ totals) %>% mutate(labels = scales::percent(total_percent))
 ```
 
-Once, I had created the dataframes according to my new categories, I decided to present them in a treemap plot. 
+Once I had created the dataframes according to my new categories, I decided to present them in a treemap plot. 
 
 See graphs [Time worn per day](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/1B81827F-D064-4B2D-8BE1-603FC535AC61.png), [High use - Users](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/B7C7F0F4-9989-48B3-92D2-4AB953271FC2.png), [Low use - Users](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/CC5F4068-9A47-4DC8-B0DE-58FD0AD93916.png), and [Moderate use - Users](https://github.com/MaximeEme/Bellabeat_Case_Study/blob/main/D9A9E622-AFFA-4CEE-91C9-EB75CB0A1F02.png). 
 
-According to the plots, I can verify that 36% of the users in total wear the device all day, 60% more than half a day and 4% less than a day. 
+According to the plots, I can verify that 36% of the users in total wear the device all day, 60% more than half a day and 4% less than a day.
 
-If we want to be even more precise, I can say that in the High use category, 89% of the users, wear their device more than half a day and only just 6%, all day. The low use category are the users that wear the device, all day. 
-## Step 5 : Share phase 
+## Step 5 : Share phase
 
-See the graphs throughout this presentation 
+See the graphs throughout this presentation
 
-## Step 6 : Act phase 
+## Step 6 : Act phase
 
-I would encourage Bellabeat to continue their trend searching and to extend their datasets to be able to find more noticeable trends and have better results. 
+I would encourage Bellabeat to continue their trend searching and to extend their datasets to be able to find more noticeable trends and have better results.
 
-1/ After I classified the users in four categories (sedentary, lightly active, fairly active and very active), I noticed than the average user was very active (i.e walk more that 7500 steps). We can encourage that behavior by sending notifications and alarm if the user hasn't reached its goal.
+1/ After I classified the users in four categories (sedentary, lightly active, fairly active and very active), I noticed that the average user was very active (i.e walk more than 7500 steps). We can encourage that behavior by sending notifications and alarms if the user hasn't reached its goal.
 
-2/ The results I got on sleep from the dataset could be improve by setting alarms on desired amount of sleep and maybe notification on the health benefits of a good night of sleep. 
+2/ The results I got on sleep from the dataset could be improved by setting alarms on desired amount of sleep and maybe notification on the health benefits of a good night of sleep.
 
 3/ Setting a reward system on reaching daily, monthly and quarterly goals. The rewards could go from a new background on the app to free-month subscription. 
