@@ -17,7 +17,9 @@ Analyse smart data usage from fitbit users to discover trends and apply them to 
 3. **Key stakeholders**
 
 **Urška Sršen**: Bellabeat's cofounder and Chief Creative Officier.
+
 **Sando Mur**: Mathematician and Bellabeat's cofounder; key member of the Bellabeat executive team.
+
 **Bellabeat marketing analytics team**
 
 ## Step 2 : Prepare
